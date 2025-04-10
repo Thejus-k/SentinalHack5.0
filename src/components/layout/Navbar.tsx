@@ -94,7 +94,7 @@ const Navbar = () => {
               </button>
             ))}
             <a
-              href="https://forms.google.com/register-sentinel-hack"
+              href="https://forms.gle/p7oLpTmREHshymSSA"
               target="_blank" 
               rel="noopener noreferrer"
               className="font-cyber text-sm uppercase tracking-wider ml-1 bg-cyber-red px-3 lg:px-6 py-2 rounded clip-slant hover:shadow-neon-red transition-all duration-300"
@@ -135,7 +135,7 @@ const Navbar = () => {
                 </button>
               ))}
               <a
-                href="https://forms.google.com/register-sentinel-hack"
+                href="https://forms.gle/p7oLpTmREHshymSSA"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="font-cyber text-base uppercase tracking-wider bg-cyber-red px-6 py-3 mt-4 text-center rounded clip-slant hover:shadow-neon-red transition-all duration-300"

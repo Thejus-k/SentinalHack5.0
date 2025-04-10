@@ -71,7 +71,11 @@ const Footer = () => {
             <h3 className="text-lg font-cyber mb-4">Contact Us</h3>
             <p className="mb-2 text-gray-300">
               <span className="block font-semibold">Email:</span>
-              <a href="mailto:Sentinelhack5.0@ksit.edu.in" className="hover:text-neon-red transition-colors">Sentinelhack5.0@ksit.edu.in</a>
+              <a href="mailto:Sentinelhack5.o@ksit.edu.in" className="hover:text-neon-red transition-colors">Sentinelhack5.o@ksit.edu.in</a>
+            </p>
+            <p className="mb-2 text-gray-300">
+              <span className="block font-semibold">Student Coordinators:</span>
+              Karthik V (+91 6362763202)<br />Vamshi N M (+91 7019023964)
             </p>
             <p className="mb-2 text-gray-300">
               <span className="block font-semibold">Location:</span>

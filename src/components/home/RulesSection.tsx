@@ -9,7 +9,6 @@ const RulesSection = () => {
     "Participants should bring their own laptops, chargers, spike busters, and any additional hardware needed.",
     "Participants need to bring their college ID cards.",
     "Team leaders will receive a Registration Confirmation Mail upon entry finalization.",
-    "Snacks and Beverages will be provided.",
     "Registration fee is Rs.200 per person (non-refundable).",
     "Teams must have between 2 to 4 members."
   ];

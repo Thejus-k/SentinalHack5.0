@@ -33,7 +33,7 @@ const CtaSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a 
-              href="https://forms.google.com/register-sentinel-hack" 
+              href="https://forms.gle/p7oLpTmREHshymSSA" 
               target="_blank" 
               rel="noopener noreferrer"
               className="font-cyber bg-cyber-red px-4 sm:px-6 py-2 sm:py-3 md:px-8 md:py-4 rounded clip-slant hover:shadow-neon-red transition-all duration-300 text-sm sm:text-base md:text-lg uppercase tracking-wider"

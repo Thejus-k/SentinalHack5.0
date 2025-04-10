@@ -113,7 +113,7 @@ const HeroSection = () => {
             className="flex flex-col sm:flex-row gap-4 mt-6 sm:mt-8"
           >
             <a 
-              href="https://forms.google.com/register-sentinel-hack" 
+              href="https://forms.gle/p7oLpTmREHshymSSA" 
               target="_blank" 
               rel="noopener noreferrer"
               className="font-cyber bg-cyber-red px-6 sm:px-8 py-3 rounded clip-slant hover:shadow-neon-red transition-all duration-300 text-sm sm:text-lg uppercase tracking-wider"
