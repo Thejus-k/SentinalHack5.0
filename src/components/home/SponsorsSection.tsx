@@ -58,7 +58,7 @@ const SponsorsSection = () => {
           className="text-center mt-6 sm:mt-8 md:mt-16"
         >
           <a 
-            href="https://forms.google.com/sponsor-sentinel-hack" 
+            href="mailto:Sentinelhack5.0@ksit.edu.in"
             target="_blank" 
             rel="noopener noreferrer"
             className="font-cyber inline-flex items-center border border-neon-red px-4 py-2 sm:px-6 sm:py-3 rounded hover:shadow-neon-red transition-all duration-300 text-xs sm:text-sm md:text-base"

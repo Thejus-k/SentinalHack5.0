@@ -71,7 +71,7 @@ const Footer = () => {
             <h3 className="text-lg font-cyber mb-4">Contact Us</h3>
             <p className="mb-2 text-gray-300">
               <span className="block font-semibold">Email:</span>
-              <a href="mailto:Sentinelhack5.o@ksit.edu.in" className="hover:text-neon-red transition-colors">Sentinelhack5.o@ksit.edu.in</a>
+              <a href="mailto:Sentinelhack5.0@ksit.edu.in" className="hover:text-neon-red transition-colors">Sentinelhack5.0@ksit.edu.in</a>
             </p>
             <p className="mb-2 text-gray-300">
               <span className="block font-semibold">Student Coordinators:</span>
@@ -86,7 +86,7 @@ const Footer = () => {
             </p>
             <p className="mt-4">
               <a 
-                href="https://forms.google.com/sponsor-sentinel-hack" 
+                href="mailto:Sentinelhack5.0@ksit.edu.in"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="font-cyber text-sm border border-neon-red px-4 py-2 rounded hover:shadow-neon-red transition-all duration-300"
