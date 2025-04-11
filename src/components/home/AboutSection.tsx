@@ -36,7 +36,7 @@ const AboutSection = () => {
                 <div className="text-[10px] sm:text-xs md:text-sm text-gray-400">HOURS</div>
               </div>
               <div className="glassmorphism p-2 sm:p-3 md:p-4 text-center border border-white/10">
-                <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-cyber neon-text-blue mb-0.5 md:mb-1">₹50K+</div>
+                <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-cyber neon-text-blue mb-0.5 md:mb-1">₹80K</div>
                 <div className="text-[10px] sm:text-xs md:text-sm text-gray-400">PRIZES</div>
               </div>
             </div>
@@ -49,16 +49,24 @@ const AboutSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="glassmorphism p-4 md:p-6 border border-white/10 rounded-lg mt-6 lg:mt-0"
           >
-            <div className="aspect-w-16 aspect-h-9 mb-4 sm:mb-6">
-              <div className="w-full h-full bg-cyber-dark/50 flex items-center justify-center">
-                <div className="text-center p-4">
-                  <span className="text-lg sm:text-xl md:text-2xl font-cyber neon-text-blue">SENTINEL HACK</span>
-                  <p className="text-xs sm:text-sm md:text-base mt-2 text-gray-300">
-                    Video coming soon
-                  </p>
-                </div>
+          <div className="mb-4 sm:mb-6 flex justify-center px-4">
+            <div className="w-full max-w-xs sm:max-w-sm md:max-w-md bg-cyber-dark/50 p-4 rounded-lg border border-white/10 text-center">
+              <span className="text-lg sm:text-xl md:text-2xl font-cyber neon-text-blue block mb-3 break-words">
+                SENTINEL HACK
+              </span>
+              <div className="w-full aspect-video rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.youtube.com/embed/bFiLlNWwkz8"
+                  title="Sentinel Hack 5.0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="w-full h-full rounded-lg"
+              ></iframe>
               </div>
             </div>
+          </div>
+
+
             <div className="space-y-3 sm:space-y-4">
               <div className="flex items-center">
                 <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-cyber-red flex items-center justify-center mr-3 sm:mr-4">
