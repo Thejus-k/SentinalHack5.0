@@ -1,17 +1,11 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 
 const sponsors = [
-  { name: 'TechGiant', level: 'Platinum' },
-  { name: 'QuantumSoft', level: 'Gold' },
-  { name: 'CyberSystems', level: 'Gold' },
-  { name: 'Datarithm', level: 'Silver' },
-  { name: 'InnovateLabs', level: 'Silver' },
-  { name: 'NexGen', level: 'Bronze' },
-  { name: 'ByteCraft', level: 'Bronze' },
-  { name: 'CloudPeak', level: 'Bronze' },
+  { name: 'ZYSK', level: 'Platinum', logo: 'zysk.png' },
+  { name: 'KSRIF', level: 'Platinum',     logo: 'KSRIF.png' },
 ];
+
 
 const SponsorsSection = () => {
   return (
@@ -35,19 +29,36 @@ const SponsorsSection = () => {
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
-          {sponsors.map((sponsor, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.05 }}
-              className="glassmorphism flex flex-col items-center justify-center p-3 sm:p-4 md:p-6 h-20 sm:h-24 md:h-32 rounded-lg border border-white/10 hover:border-neon-red/50 transition-all duration-300"
-            >
-              <span className="text-sm sm:text-base md:text-xl font-cyber">{sponsor.name}</span>
-              <span className="text-xs mt-1 md:mt-2 text-gray-400">{sponsor.level} Sponsor</span>
-            </motion.div>
-          ))}
+          {sponsors.map((sponsor, index) => {
+            // Use the provided logo filename from the sponsor object.
+            const logoPath = `/sponsors/${sponsor.logo}`;
+
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                className="glassmorphism flex flex-col items-center justify-center p-3 sm:p-4 md:p-6 h-32 sm:h-40 md:h-48 rounded-lg border border-white/10 hover:border-neon-red/50 transition-all duration-300"
+              >
+                {/* Sponsor Logo */}
+                <img 
+                  src={logoPath} 
+                  alt={`${sponsor.name} logo`} 
+                  className="mb-2 max-w-full max-h-12 object-contain"
+                />
+                {/* Sponsor Name */}
+                <span className="text-sm sm:text-base md:text-xl font-cyber">
+                  {sponsor.name}
+                </span>
+                {/* Sponsor Level */}
+                <span className="text-xs mt-1 md:mt-2 text-gray-400">
+                  {sponsor.level} Sponsor
+                </span>
+              </motion.div>
+            );
+          })}
         </div>
 
         <motion.div

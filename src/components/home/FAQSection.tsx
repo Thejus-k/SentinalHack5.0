@@ -8,7 +8,7 @@ const faqs = [
     question: 'When and Where?',
     answer: (
       <>
-        Sentinel Hack will take place on May 4th and 5th at K.S Institute of Technology, 14, Kanakapura Main Road, Municipal Corporation Layout, Raghuvanahalli, Bengaluru, Karnataka 560109.{" "}
+        Sentinel Hack will take place on April 28th and 29th at K.S Institute of Technology, 14, Kanakapura Main Road, Municipal Corporation Layout, Raghuvanahalli, Bengaluru, Karnataka 560109.{" "}
         <a
           href="https://maps.app.goo.gl/bWyLk1W3xV9Wxv438"
           target="_blank"
