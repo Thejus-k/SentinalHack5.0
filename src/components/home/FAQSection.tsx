@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     question: 'Duration?',
-    answer: "You will have 24 hours to build your product. The event starts Thursday morning and runs until Friday morning. A detailed schedule will be released closer to the event.",
+    answer: "You will have 24 hours to build your product. The event starts Monday morning and runs until Tuesday morning. A detailed schedule will be released closer to the event.",
     icon: <Clock className="h-4 w-4 text-neon-blue" />
   },
   {
