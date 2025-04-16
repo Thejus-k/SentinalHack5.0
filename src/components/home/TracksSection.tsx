@@ -38,6 +38,13 @@ const tracks = [
     description: "Create innovative solutions for financial services, transactions, and economic inclusivity.",
     icon: <DollarSign className="h-8 w-8 text-cyber-yellow" />,
     color: 'neon-yellow'
+  },
+  {
+    title: "Open Innovation",
+    subtitle: "Creative Solutions",
+    description: "Showcase your creativity with solutions that don't fit into other categories but solve real problems.",
+    icon: <Lightbulb className="h-8 w-8 text-cyber-yellow" />,
+    color: 'neon-yellow'
   }
 ];
 
