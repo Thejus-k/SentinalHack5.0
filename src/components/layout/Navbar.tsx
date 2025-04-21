@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import {RegisterButton} from '../ui/RegisterButton'
 
 const navItems = [
   { name: 'Home', path: '/', id: 'home' },
@@ -93,14 +94,12 @@ const Navbar = () => {
                 {item.name}
               </button>
             ))}
-            <a
-              href="https://forms.gle/p7oLpTmREHshymSSA"
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="font-cyber text-sm uppercase tracking-wider ml-1 bg-cyber-red px-3 lg:px-6 py-2 rounded clip-slant hover:shadow-neon-red transition-all duration-300"
-            >
-              Register
-            </a>
+          <span
+            className="font-cyber text-sm uppercase tracking-wider ml-1 bg-gray-600 px-3 lg:px-6 py-2 rounded clip-slant cursor-not-allowed opacity-75"
+          >
+            Registrations Closed
+          </span>
+
           </nav>
 
           {/* Mobile menu button */}
@@ -134,15 +133,11 @@ const Navbar = () => {
                   {item.name}
                 </button>
               ))}
-              <a
-                href="https://forms.gle/p7oLpTmREHshymSSA"
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="font-cyber text-base uppercase tracking-wider bg-cyber-red px-6 py-3 mt-4 text-center rounded clip-slant hover:shadow-neon-red transition-all duration-300"
-                onClick={() => setIsOpen(false)}
+              <span
+                className="font-cyber text-sm uppercase tracking-wider ml-1 bg-gray-600 px-3 lg:px-6 py-2 rounded clip-slant cursor-not-allowed opacity-75"
               >
-                Register
-              </a>
+                Registrations Closed
+              </span>
             </div>
           </motion.div>
         )}

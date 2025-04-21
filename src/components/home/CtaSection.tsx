@@ -32,14 +32,12 @@ const CtaSection = () => {
             Join hundreds of innovators at Sentinel Hack 5.0 on April 28-29, 2025 and be part of a transformative tech experience.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a 
-              href="https://forms.gle/p7oLpTmREHshymSSA" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="font-cyber bg-cyber-red px-4 sm:px-6 py-2 sm:py-3 md:px-8 md:py-4 rounded clip-slant hover:shadow-neon-red transition-all duration-300 text-sm sm:text-base md:text-lg uppercase tracking-wider"
-            >
-              Register Now
-            </a>
+            
+            <span
+              className="font-cyber bg-gray-600 px-4 sm:px-6 py-2 sm:py-3 md:px-8 md:py-4 rounded clip-slant hover:shadow-neon-red transition-all duration-300 text-sm sm:text-base md:text-lg uppercase tracking-wider"
+              >
+              Registrations Closed
+            </span>
             <a 
               href="mailto:Sentinelhack5.0@ksit.edu.in" 
               className="font-cyber border border-neon-blue px-4 sm:px-6 py-2 sm:py-3 md:px-8 md:py-4 rounded clip-slant hover:shadow-neon-blue transition-all duration-300 text-sm sm:text-base md:text-lg uppercase tracking-wider"

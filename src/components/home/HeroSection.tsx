@@ -112,14 +112,11 @@ const HeroSection = () => {
             transition={{ delay: 1, duration: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 mt-6 sm:mt-8"
           >
-            <a 
-              href="https://forms.gle/p7oLpTmREHshymSSA" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="font-cyber bg-cyber-red px-6 sm:px-8 py-3 rounded clip-slant hover:shadow-neon-red transition-all duration-300 text-sm sm:text-lg uppercase tracking-wider"
+            <span
+              className="font-cyber bg-gray-600 px-6 sm:px-8 py-3 rounded clip-slant hover:shadow-neon-red transition-all duration-300 text-sm sm:text-lg uppercase tracking-wider"
             >
-              Register Now
-            </a>
+              Registrations Closed
+            </span>
             <button 
               onClick={() => scrollToSection('tracks')}
               className="font-cyber border border-cyber-red/50 px-6 sm:px-8 py-3 rounded clip-slant hover:shadow-neon-red transition-all duration-300 text-sm sm:text-lg uppercase tracking-wider"

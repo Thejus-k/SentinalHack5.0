@@ -57,9 +57,6 @@ const Footer = () => {
               <li>
                 <button onClick={() => scrollToSection('faqs')} className="text-gray-300 hover:text-neon-red transition-colors">FAQs</button>
               </li>
-              <li>
-                <a href="https://forms.google.com/register-sentinel-hack" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-neon-red transition-colors">Register</a>
-              </li>
             </ul>
           </div>
           <div>
