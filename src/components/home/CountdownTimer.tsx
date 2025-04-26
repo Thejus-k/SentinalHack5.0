@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../../hooks/use-mobile';
 
@@ -13,45 +12,58 @@ interface TimeLeft {
   seconds: number;
 }
 
-const calculateTimeLeft = (targetDate: Date): TimeLeft => {
-  const difference = +targetDate - +new Date();
-  
-  if (difference > 0) {
-    return {
-      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-      minutes: Math.floor((difference / 1000 / 60) % 60),
-      seconds: Math.floor((difference / 1000) % 60)
-    };
-  }
-  
-  return {
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0
-  };
-};
+const MS_IN_DAY = 1000 * 60 * 60 * 24;
 
 const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft(targetDate));
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [difference, setDifference] = useState<number>(+targetDate - +new Date());
   const [isBlinking, setIsBlinking] = useState<boolean>(false);
   const isMobile = useIsMobile();
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft(targetDate));
-    }, 1000);
+    const update = () => {
+      const now = +new Date();
+      const diff = +targetDate - now;
+      setDifference(diff);
 
-    const blinkInterval = setInterval(() => {
-      setIsBlinking(prev => !prev);
-    }, 1000);
+      let remainingMs: number;
+      if (diff >= 0) {
+        remainingMs = diff;
+      } else if (Math.abs(diff) <= MS_IN_DAY) {
+        // Negative countdown from 24h to 0
+        remainingMs = MS_IN_DAY - Math.abs(diff);
+      } else {
+        remainingMs = 0;
+      }
+
+      const days = Math.floor(remainingMs / MS_IN_DAY);
+      const hours = Math.floor((remainingMs / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((remainingMs / (1000 * 60)) % 60);
+      const seconds = Math.floor((remainingMs / 1000) % 60);
+
+      setTimeLeft({ days, hours, minutes, seconds });
+    };
+
+    update();
+    const timerId = setInterval(update, 1000);
+    const blinkId = setInterval(() => setIsBlinking(prev => !prev), 1000);
 
     return () => {
-      clearInterval(timer);
-      clearInterval(blinkInterval);
+      clearInterval(timerId);
+      clearInterval(blinkId);
     };
   }, [targetDate]);
+
+  // After 24h past target, show end message
+  if (difference < 0 && Math.abs(difference) > MS_IN_DAY) {
+    return (
+      <div className="flex justify-center mt-6">
+        <span className="text-2xl sm:text-3xl md:text-4xl font-cyber mb-3 sm:mb-4 md:mb-6">
+          The hackathon has ended 🏁
+        </span>
+      </div>
+    );
+  }
 
   const timeBoxes = [
     { label: 'DAYS', value: timeLeft.days },
@@ -73,7 +85,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
           <span className="text-xs sm:text-sm mt-1 text-gray-400 font-cyber">
             {box.label}
           </span>
-          {!isMobile && (index < timeBoxes.length - 1) && (
+          {!isMobile && index < timeBoxes.length - 1 && (
             <span className={`hidden sm:block absolute -right-2.5 text-2xl top-1/2 transform -translate-y-1/2 ${isBlinking ? 'opacity-100' : 'opacity-0'} transition-opacity`}>
               :
             </span>
@@ -85,3 +97,4 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
 };
 
 export default CountdownTimer;
+  

@@ -100,9 +100,6 @@ const HeroSection = () => {
               <span className="text-white">HACK</span> 
               <span className="text-white">5.0</span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-4 sm:mb-6 text-gray-300 px-2">
-              24-hour state level hackathon on April 28-29, 2025.<br /> If not now, when?
-            </p>
             <CountdownTimer targetDate={hackathonDate} />
           </motion.div>
           
