@@ -2,8 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const sponsors = [
+  { name: 'NotFunny', level: 'Platinum', logo: 'NotFunny.jpg' },
   { name: 'ZYSK', level: 'Platinum', logo: 'zysk.png' },
-  { name: 'KSRIF', level: 'Platinum',     logo: 'KSRIF.png' },
+  { name: 'KSRIF', level: 'Platinum', logo: 'KSRIF.png' },
 ];
 
 

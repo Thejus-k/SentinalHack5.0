@@ -93,7 +93,7 @@ const HeroSection = () => {
             className="mb-6 sm:mb-8"
           >
             <h1 
-              className={`text-3xl sm:text-5xl md:text-7xl font-cyber font-black mb-3 sm:mb-4 ${glitching ? 'glitch' : ''}`}
+              className={`text-3xl sm:text-5xl md:text-7xl font-cyber font-black mb-3 sm:mb-4`}
               data-text="SENTINEL HACK 5.0"
             >
               <span className="neon-text-red">SENTINEL</span> 
