@@ -7,7 +7,7 @@ import { ChevronDown } from 'lucide-react';
 import { useIsMobile } from '../../hooks/use-mobile';
 
 // Set the hackathon date - April 28-29, 2025
-const hackathonDate = new Date('2025-04-28T10:30:00');
+const hackathonDate = new Date('2025-04-28T11:00:00');
 
 const HeroSection = () => {
   const [glitching, setGlitching] = useState(false);
